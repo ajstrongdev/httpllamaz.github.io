@@ -1,36 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 * {
     margin: 0;
 }
 
 :root {
-    --background: #242424;
-    --accent: #7289DA;
-    --text: #c4c4c4;
+    --accent: white;
     --text-splash: white;
-    --footer: #2d2d2d;
 }
 
-body, html {
-    height: 100%;
-    margin: 0;
-    font-family: 'Roboto Mono', monospace;
-    color: var(--text);
-    background-color: var(--background);
-  }
-  
+body {
+    background: linear-gradient(132deg, #1e90ff 0.00%, #8a2be2 100.00%) no-repeat fixed;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
 .splash {
-    /* The image used */
-    background-image: url("../images/splash.png");
-  
-    /* Full height */
-    height: 100%; 
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.splash-text {
+    padding: 16% 0;
+    text-align: center;
+    color: var(--text-splash);
+    margin-left: 16px;
+    margin-right: 16px;
 }
 
 .splash-text {
@@ -63,7 +58,14 @@ p {
 a {
     font-size: 2vh;
     color: var(--accent);
-    text-decoration: none;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+    transition: 0.3s;
 }
 
 .button {
@@ -75,6 +77,7 @@ a {
     color: var(--text-splash);
     padding: 4px;
     transition: 0.3s;
+    text-decoration: none;
 }
 
 .button:hover {
@@ -100,6 +103,7 @@ ul li{
     width: 50%;
     text-align: left;
     padding: 20px;
+    margin-top: .5em;
 }
 
 .content h1 {
@@ -111,11 +115,10 @@ ul li{
 }
 
 .footer {
-    width: 100% - 16px;
+    width: 100%;
     text-align: center;
     color: var(--accent);
-    background-color: var(--footer);
-    padding: 16px;
+    margin-top: 2em;
 }
 
 .footer p {
@@ -139,14 +142,23 @@ ul li{
     }
 
     .splash-text {
-        padding: 75% 0;
+        padding: 40% 0;
         text-align: center;
         color: var(--text-splash);
         margin-left: 16px;
         margin-right: 16px;
     }
 
-    .splash-image {
-        width: 20%;
+    .splash-text p {
+       margin: 16px;
     }
+
+    .splash-image {
+        width: 30%;
+    }
+
+    .button {
+        margin: 0;
+    }
+
 }
